@@ -1,0 +1,17 @@
+{
+  "Login": {
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "login": "ログイン",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "welcomeBack" : "おかえり, {email}"
+  },
+  "Validation": {
+    "invalidFormat": "無効な形式です。",
+    "required": "この項目は入力必須です。"
+  },
+  "NotFound": {
+    "title": "404: ページが見つかりません",
+    "description": "申し訳ありませんが、お探しのページは見つかりませんでした。"
+  }
+}

@@ -1,12 +1,12 @@
-import {useTranslations} from 'next-intl';
-import {Link} from '@/i18n/routing';
+import PageContainer from '@/components/Layout/PageContainer';
+import Login from '@/containers/Login';
 
 export default function HomePage() {
-  const t = useTranslations('HomePage');
   return (
-    <div>
-      <h1>{t('title')}</h1>
-      <Link href="/about">{t('about')}</Link>
-    </div>
+    <PageContainer>
+      <div className="max-w-md m-auto">
+        <Login />
+      </div>
+    </PageContainer>
   );
 }

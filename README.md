@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Home Assignment Gerukin
+Welcome to my home assignment project, a Next.js application enhanced with Storybook for building and testing UI components in isolation. This project uses Node.js 20 and Yarn Berry 4.4.1.
 
-## Getting Started
+Prerequisites
+Before you begin, ensure you have the following installed:
 
-First, run the development server:
+Node.js (v20)
+Yarn Berry (v4.4.1)
+Installation
+Clone the repository and install dependencies:
 
-```bash
-npm run dev
-# or
+bash
+Copy code
+git clone <repository-url>
+cd <repository-name>
+yarn install
+Available Scripts
+In the project directory, you can run:
+
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Runs the app in the development mode using Next.js. Open http://localhost:3000 to view it in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+yarn build
+Builds the app for production to the .next folder.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+yarn start
+Starts the Next.js server in production mode. Ensure you have run yarn build first.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+yarn lint
+Runs ESLint to handle code quality and formatting issues.
 
-## Learn More
+yarn storybook
+Runs Storybook on http://localhost:6006, allowing you to view and test UI components in isolation.
 
-To learn more about Next.js, take a look at the following resources:
+yarn build-storybook
+Builds the Storybook static files for production.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Learn More
+To learn more about Next.js and Storybook, take a look at the following resources:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Next.js Documentation - learn about Next.js features and API.
+Storybook Documentation - learn about Storybook and how to use it with your projects.
