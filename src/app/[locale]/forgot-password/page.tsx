@@ -1,11 +1,11 @@
 import PageContainer from '@/components/Layout/PageContainer';
-import Login from '@/containers/Login';
+import ForgotPassword from '@/containers/ForgotPassword';
 
 export default function HomePage() {
   return (
     <PageContainer>
       <div className="max-w-lg m-auto">
-        <Login />
+        <ForgotPassword />
       </div>
     </PageContainer>
   );

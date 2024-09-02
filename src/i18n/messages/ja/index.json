@@ -4,14 +4,19 @@
     "password": "パスワード",
     "login": "ログイン",
     "forgotPassword": "パスワードをお忘れですか？",
-    "welcomeBack" : "おかえり, {email}"
+    "welcomeBack": "おかえり, {email}"
   },
   "Validation": {
     "invalidFormat": "無効な形式です。",
     "required": "この項目は入力必須です。"
   },
-  "NotFound": {
-    "title": "404: ページが見つかりません",
-    "description": "申し訳ありませんが、お探しのページは見つかりませんでした。"
+  "ForgotPassword": {
+    "pageTitle": "パスワードを忘れた",
+    "instruction": "アカウントに関連付けられたメールを取得するために、名前と姓を入力してください。",
+    "firstName": "名",
+    "lastName": "姓",
+    "submit": "送信",
+    "confirmationMessage": "{firstName} {lastName}にメールを送信しようとします...",
+    "login": "ログイン"
   }
 }

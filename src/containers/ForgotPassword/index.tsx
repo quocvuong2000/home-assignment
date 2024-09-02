@@ -4,19 +4,17 @@ import { Spinner } from '@/components/Spinner';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { SubmitHandler } from 'react-hook-form';
-import { twMerge } from 'tailwind-merge';
-import LoginForm from './Form';
-import { LoginFormValues } from './schema';
+import ForgotPasswordForm from './Form';
+import { ForgotPasswordFormValues } from './schema';
+import { Link } from '@/i18n/routing';
 
-const Login: React.FC = () => {
-  const t = useTranslations('Login');
+const ForgotPassword: React.FC = () => {
+  const t = useTranslations('ForgotPassword');
   const [loading, setLoading] = useState<boolean>(false);
   const [showMsg, setShowMsg] = useState<boolean>(false);
-  const [email, setEmail] = useState<string>('');
 
-  const onSubmit: SubmitHandler<LoginFormValues> = async (data) => {
+  const onSubmit: SubmitHandler<ForgotPasswordFormValues> = async (data) => {
     setLoading(true);
-    setEmail(data.email);
     try {
       const response = await fetch('https://httpbin.org/post', {
         method: 'POST',
@@ -36,18 +34,31 @@ const Login: React.FC = () => {
 
   return showMsg ? (
     <div className="animate-slideBounce mt-8 md:mt-24">
-      <h3 className="text-2xl">{t('welcomeBack', { email })}</h3>
+      <p>{t('confirmationMessage', { firstName: '', lastName: '' })}</p>
     </div>
   ) : (
-    <Card className={twMerge('animate-slideBounce mt-8 md:mt-24 relative')}>
+    <Card className={'animate-slideBounce mt-8 md:mt-24 relative !p-2'}>
       {loading && (
         <div className="absolute-center">
           <Spinner />
         </div>
       )}
-      <LoginForm onSubmit={onSubmit} loading={loading} />
+      <h3 className="text-2xl font-bold text-center mb-8">{t('pageTitle')}</h3>
+      <div className="flex items-start justify-start">
+        <div className="w-1/2 p-3 text-justify">
+          <p>{t('instruction')}</p>
+        </div>
+        <div className="w-1/2 p-3 border-l">
+          <ForgotPasswordForm onSubmit={onSubmit} loading={loading} />
+        </div>
+      </div>
+      <div className="text-center mt-4">
+        <Link className="text-blue-500 text-sm" href="/">
+          {t('login')}
+        </Link>
+      </div>
     </Card>
   );
 };
 
-export default Login;
+export default ForgotPassword;
