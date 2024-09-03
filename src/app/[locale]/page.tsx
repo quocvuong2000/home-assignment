@@ -4,7 +4,7 @@ import Login from '@/containers/Login';
 export default function HomePage() {
   return (
     <PageContainer>
-      <div className="max-w-lg m-auto">
+      <div className="max-w-xl m-auto">
         <Login />
       </div>
     </PageContainer>

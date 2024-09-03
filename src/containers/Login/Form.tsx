@@ -8,10 +8,9 @@ import schema, { LoginFormValues } from './schema';
 
 interface LoginFormProps {
   onSubmit: SubmitHandler<LoginFormValues>;
-  loading: boolean;
 }
 
-const LoginForm: React.FC<LoginFormProps> = ({ onSubmit, loading }) => {
+const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
   const t = useTranslations('Login');
 
   const { control, handleSubmit } = useForm<LoginFormValues>({
@@ -23,10 +22,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit, loading }) => {
   });
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className={loading ? 'opacity-0' : ''}
-    >
+    <form onSubmit={handleSubmit(onSubmit)}>
       <h3 className="text-2xl font-bold text-center mb-8">{t('login')}</h3>
       <InputTextField control={control} placeholder={t('email')} name="email" />
       <Button label={t('login')} primary className="w-full" type="submit" />

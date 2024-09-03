@@ -16,7 +16,7 @@
     "firstName": "名",
     "lastName": "姓",
     "submit": "送信",
-    "confirmationMessage": "{firstName} {lastName}にメールを送信しようとします...",
+    "confirmationMessage": "{firstName} {lastName} にメールを送信しようとします...",
     "login": "ログイン"
   }
 }

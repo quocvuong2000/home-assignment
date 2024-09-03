@@ -7,12 +7,10 @@ import schema, { ForgotPasswordFormValues } from './schema';
 
 interface ForgotPasswordFormProps {
   onSubmit: SubmitHandler<ForgotPasswordFormValues>;
-  loading: boolean;
 }
 
 const ForgotPasswordForm: React.FC<ForgotPasswordFormProps> = ({
   onSubmit,
-  loading,
 }) => {
   const t = useTranslations('ForgotPassword');
 
@@ -26,10 +24,7 @@ const ForgotPasswordForm: React.FC<ForgotPasswordFormProps> = ({
   });
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className={loading ? 'opacity-0' : ''}
-    >
+    <form onSubmit={handleSubmit(onSubmit)}>
       <InputTextField
         control={control}
         placeholder={t('firstName')}
